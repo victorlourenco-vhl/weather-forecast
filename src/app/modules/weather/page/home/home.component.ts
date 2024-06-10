@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
+import { WeatherData } from '../../../../models/interfaces/weather'
+
 
 @Component({
   selector: 'app-home',
@@ -10,16 +12,20 @@ import { WeatherService } from '../../services/weather.service';
 })
 export class HomeComponent implements OnInit {
 
+  cityName = "São Paulo"
+  weatherData!: WeatherData;
+
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    // throw new Error("Método ainda não implementado")
+    this.getWeatherDatByCity(this.cityName)
   }
 
   getWeatherDatByCity(cityName: string) {
     this.weatherService.getWeatherData(cityName).subscribe({
       next: (reponse) => {
-        console.log(reponse)
+        reponse && (this.weatherData = reponse)
+        console.log(this.weatherData)
       },
       error: (error) => console.log(error)
     })
