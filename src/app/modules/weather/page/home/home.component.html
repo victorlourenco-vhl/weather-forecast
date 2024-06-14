@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh; ">
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh; ">
     <form class="input-group mb-3 w-50" (submit)="onSubmit()">
         <input type="text" class="form-control" placeholder="Nome da cidade" aria-label="Recipient's username"
             aria-describedby="button-addon2" name="city" [(ngModel)]="cityName">
@@ -10,4 +10,7 @@
             </svg>
         </button>
     </form>
+    @if (weatherData) {
+        <app-card [weatherData]="weatherData"></app-card>
+    }
 </div>
