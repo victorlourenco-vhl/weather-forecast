@@ -1,5 +1,9 @@
 <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh; ">
-    <form class="input-group mb-3 w-50" (submit)="onSubmit()">
+
+    <h1 class="mb-5">Sejam bem-vindos ao Wheather Forecast ☀️</h1>
+    <p></p>
+
+    <form class="input-group mb-5 mt-5 w-50" (submit)="onSubmit()">
         <input type="text" class="form-control" placeholder="Nome da cidade" aria-label="Recipient's username"
             aria-describedby="button-addon2" name="city" [(ngModel)]="cityName">
         <button class="btn btn-outline-info" type="button" id="button-addon2" (click)="onSubmit()">

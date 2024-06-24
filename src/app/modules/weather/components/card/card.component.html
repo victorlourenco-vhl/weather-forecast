@@ -1,14 +1,14 @@
-<div class="card" style="width: 18rem;">
-    <!-- @if (weatherData.main.temp > 15) {
-        <img src="../../../../../images/frio-happy.png" class="card-img-top" alt="Imagem frio">
+<div class="card p-5 d-flex flex-column align-items-center" style="width: 18rem;">
+    <h2 class="p-2">{{weatherData.name}}</h2>
+
+    @if (weatherData.main.temp > 15) {
+        <img src="assets/calor-happy.png" class="card-img-top" alt="Imagem frio">
     }
     @else {
-        <img src="../../../../../images/calor-happy.png" class="card-img-top" alt="Imagem calor">
-    } -->
-<img src="calor-happy.png" class="card-img-top" alt="Imagem calor">
-    
-    <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+        <img src="assets/frio-happy.png" class="card-img-top" alt="Imagem calor">
+    }
+
+    <div class="card-body d-flex flex-column align-items-center">
+        <p class="card-text">{{weatherData}}</p>
     </div>
 </div>

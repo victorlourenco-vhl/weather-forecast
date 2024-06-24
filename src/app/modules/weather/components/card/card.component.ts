@@ -19,8 +19,6 @@ export class CardComponent {
   windIcon = faWind
 
 
-  ngOnInit(): void {
-    console.log('Dados recebidos do componente pai');
-    console.log(this.weatherData)
-  }
+  ngOnInit(): void { }
+
 }
